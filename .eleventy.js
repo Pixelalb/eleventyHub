@@ -9,7 +9,7 @@ module.exports = function(eleventyConfig) {
     path: {
       source: "./src",
       output: "./public",
-      output_build: "./docs/"
+      build: "./docs/"
     }
   }
 
@@ -30,7 +30,7 @@ module.exports = function(eleventyConfig) {
   }
 
   if (process.argv.includes('--quiet')) {
-    outputPath = conf.path.output_build;
+    outputPath = conf.path.build;
 
     fs.writeFileSync(outputPath + "CNAME", conf.cname_content, (writeErr) => {
       if (writeErr) throw writeErr;
