@@ -1,0 +1,18 @@
+{
+	"scripts": {
+		"sass": "sass ./src/scss/app.scss ./public/css/app.css",
+		"sass-deploy": "sass --style=compressed ./src/scss/app.scss ./docs/css/app.css",
+		"js": "mkdir -p ./public/js/ && uglifyjs ./src/js/app.js --warn --output ./public/js/app.js",
+		"js-deploy": "mkdir -p ./docs/js/ && uglifyjs ./src/js/app.js --compress --mangle --warn --output ./docs/js/app.js",
+		"watch:eleventy": "eleventy --serve",
+		"watch:sass": "npm run sass -- --watch",
+		"watch:js": "npm run js -- --watch",
+		"start": "npm run sass && npm run js && eleventy --serve --watch",
+		"build": "npm run sass-deploy && npm run js-deploy && eleventy --quiet"
+	},
+	"dependencies": {
+		"node-sass": "^5.0.0",
+		"sass": "^1.30.0",
+		"uglify-js": "^3.12.2"
+	}
+}

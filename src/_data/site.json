@@ -1,0 +1,10 @@
+{
+  "title": "eleventyHub",
+  "description": "The 11ty static site generator, GitHub Pages ready, with sass and uglifyjs support",
+  "url": "https://stegaru.com",
+  "baseurl": "",
+  "author": {
+    "name": "Victor Stegaru"
+  },
+  "og_locale": "en_US"
+}
