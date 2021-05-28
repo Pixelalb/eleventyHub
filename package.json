@@ -1,6 +1,6 @@
 {
 	"scripts": {
-		"sass": "sass ./src/scss/app.scss ./public/css/app.css",
+		"sass": "sass ./src/scss/:./public/css/",
 		"sass-deploy": "sass --style=compressed ./src/scss/app.scss ./docs/css/app.css",
 		"js": "mkdir -p ./public/js/ && uglifyjs ./src/js/app.js --warn --output ./public/js/app.js",
 		"js-deploy": "mkdir -p ./docs/js/ && uglifyjs ./src/js/app.js --compress --mangle --warn --output ./docs/js/app.js",
